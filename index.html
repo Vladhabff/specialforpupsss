@@ -7,19 +7,19 @@
     <style>
         /* Общий стиль страницы */
         body {
+            margin: 0;
+            padding: 0;
             background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Красочный градиент */
             font-family: 'Arial', sans-serif;
             color: #ffffff;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            position: relative;
-            animation: backgroundAnimation 5s infinite alternate;
             flex-direction: column;
+            text-align: center;
+            position: relative;
         }
 
         /* Анимация фона */
@@ -32,28 +32,24 @@
         /* Анимация текста заголовка */
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-40px); }
+            50% { transform: translateY(-20px); }
         }
 
         /* Стиль заголовка */
         h1 {
-            font-size: 4em;
-            text-align: center;
+            font-size: 3em;
+            margin: 20px;
             text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7); /* Тень */
-            margin: 20px 0;
             animation: bounce 2s infinite;
             word-wrap: break-word;
         }
 
         /* Стиль сообщения */
         .message {
-            font-size: 2.5em;
-            text-align: center;
+            font-size: 1.8em;
             margin-top: 20px;
-            color: #fff;
             line-height: 1.5;
             animation: fadeIn 3s ease-out;
-            word-wrap: break-word;
         }
 
         /* Анимация появления текста */
@@ -64,10 +60,9 @@
 
         /* Пульсация сердечек */
         .hearts {
-            font-size: 5em;
-            text-align: center;
-            animation: heartbeat 1.5s infinite;
+            font-size: 4em;
             margin-bottom: 30px;
+            animation: heartbeat 1.5s infinite;
         }
 
         @keyframes heartbeat {
@@ -80,8 +75,8 @@
         .button {
             background-color: #ff4b2b;
             border: none;
-            padding: 20px 40px;
-            font-size: 1.8em;
+            padding: 15px 30px;
+            font-size: 1.5em;
             color: white;
             border-radius: 50px;
             cursor: pointer;
@@ -122,7 +117,7 @@
         .footer {
             position: absolute;
             bottom: 20px;
-            font-size: 1.5em;
+            font-size: 1.3em;
             text-align: center;
             width: 100%;
             color: #ffffff;
@@ -131,34 +126,40 @@
 
         /* Адаптивные стили для маленьких экранов */
         @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
             h1 {
-                font-size: 3em; /* Уменьшаем размер заголовка */
+                font-size: 2.5em; /* Уменьшаем размер заголовка для планшетов */
             }
             .message {
-                font-size: 2em; /* Уменьшаем размер текста */
+                font-size: 1.5em; /* Уменьшаем размер текста для планшетов */
             }
             .hearts {
-                font-size: 4em; /* Уменьшаем размер сердечек */
+                font-size: 3.5em; /* Уменьшаем размер сердечек */
             }
             .button {
-                font-size: 1.5em; /* Уменьшаем размер кнопки */
-                padding: 15px 30px;
+                font-size: 1.4em;
+                padding: 12px 24px;
             }
         }
 
         @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
             h1 {
-                font-size: 2.5em; /* Уменьшаем размер заголовка ещё больше */
+                font-size: 2em; /* Уменьшаем размер заголовка для смартфонов */
             }
             .message {
-                font-size: 1.8em; /* Уменьшаем размер текста ещё больше */
+                font-size: 1.2em; /* Уменьшаем размер текста для смартфонов */
             }
             .hearts {
                 font-size: 3em; /* Уменьшаем размер сердечек */
             }
             .button {
-                font-size: 1.3em; /* Уменьшаем размер кнопки */
-                padding: 12px 25px;
+                font-size: 1.2em;
+                padding: 10px 20px;
             }
         }
     </style>
